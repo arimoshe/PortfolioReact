@@ -1,0 +1,46 @@
+img {
+    height: 400px;
+    width: 400px;
+    border-radius: 1000px;;
+    
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.progress {
+    width: 500px;
+    height: 500px;
+    aspect-ratio: 1/1; 
+    position: relative;
+    margin: 5px;
+    place-content: center; 
+}
+.progress:before,
+.progress:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+.progress:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, grey 96%, #0000)  0 260px/ 22px 22px no-repeat,
+        conic-gradient(blue calc(20*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - 22px), #000 calc(100% - 22px));
+    mask: radial-gradient(farthest-side, #0000 calc(92% - 22px), #000 calc(100% - 22px));
+}
+.progress:after {
+    inset: calc(50% - 22px/2);
+    background: red;
+    transform: rotate(calc(20*3.6deg - 90deg)) translate(calc(150px/2 - 50%));
+}
