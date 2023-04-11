@@ -1,0 +1,80 @@
+.navContainer {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navCenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1166px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 30px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+.navName {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.navLinkedIn {
+    padding:8px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight:  bold;
+    display: flex;
+    background:#0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.navLinkedIn svg {
+    font-size: 25px;
+    padding-top: 3px;
+    padding-right: 3px;
+}
+.navName svg {
+    font-size: 25px;
+    padding-top: 3px;
+}
+.sectionLabelContainer>div>div {
+    height: 70px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.sectionLabelMover {
+    transform: translateY(calc(0px + (-345 * (var(--scrollPos) / var(--totalHeight)))));
+}
+
+.sectionLabelQual {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    /* margin-top: calc(-500 * (var(--scrollPos) / var(--totalHeight))); */
+
+
+
+    /* transform:
+        rotateX(calc(90 * (var(--scrollPosDeg) / var(--totalHeight)))) 
+        translateZ( calc(50 * (var(--scrollPos) / var(--totalHeight)))); */
+}
+
+.sectionLabelContainer {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    mask-image: linear-gradient(transparent, black 20% 60%, transparent);
+    overflow: hidden;
+}

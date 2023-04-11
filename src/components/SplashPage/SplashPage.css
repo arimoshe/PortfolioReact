@@ -2,6 +2,7 @@
     --scrollPos:0px;
     --totalHeight:10000000000000;
     --scrollPosDeg:0deg;
+    --scrollPosPercentage:0;
 }
 
 img {
@@ -28,7 +29,12 @@ img {
 .progress {
     width: 500px;
     height: 500px;
-    transform: scale(.9);
+    margin-top: 20px;;
+    transform: 
+        scale(max(calc(.85 - (5 * var(--scrollPosPercentage) / var(--totalHeight))),.7)) translate(
+            max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-120px),
+            max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-100px)
+        );
 }
 .content {
     height: calc(100vh*4);
@@ -36,37 +42,7 @@ img {
     left: 0;
     z-index: -1;
 }
-.sectionLabelContainer > div > div {
-    height: 70px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-.sectionLabelMover {
-transform: translateY(calc(0px + (-300 * (var(--scrollPos) / var(--totalHeight)))));
-}
 
-.sectionLabelQual {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    /* margin-top: calc(-500 * (var(--scrollPos) / var(--totalHeight))); */
-    
-
-
-    /* transform:
-        rotateX(calc(90 * (var(--scrollPosDeg) / var(--totalHeight)))) 
-        translateZ( calc(50 * (var(--scrollPos) / var(--totalHeight)))); */
-}
-.sectionLabelContainer {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    mask-image: linear-gradient(transparent, black 20% 40%, transparent 50%);
-    overflow: hidden;
-}
 
 svg.top-right {
     position: absolute;

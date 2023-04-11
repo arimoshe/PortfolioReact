@@ -18,6 +18,7 @@ function Progress () {
         const r = document.querySelector(':root')
         r.style.setProperty('--scrollPos', window.scrollY + "px");
         r.style.setProperty('--scrollPosDeg', window.scrollY + 'deg')
+        r.style.setProperty('--scrollPosPercentage', window.scrollY)
     }
 
     useEffect(() => {
@@ -31,15 +32,6 @@ function Progress () {
             <div className="progress">
                 <div className="pie">
                     <img src={Headshot} alt="Ari Headshot" />
-                </div>
-                <div className="sectionLabelContainer">
-                    <div className="sectionLabelMover" >
-                        <div className="sectionLabelSplash">Meet Me</div>
-                        <div className="sectionLabelQual">Education | Experience | Skills</div>
-                        <div className="sectionLabelProjects">Projects</div>
-                        <div className="sectionLabelAbout">About Me</div>
-                        <div className="sectionLabelContact">Contact Me</div>
-                    </div>
                 </div>
                 <svg className="top-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
                     <defs>
