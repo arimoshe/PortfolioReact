@@ -1,14 +1,31 @@
-import Headshot from "../../DSCF1405.jpg"
+import Progress from "./Progress";
 import "./SplashPage.css"
 
 function SplashPage() {
+    
+   
+    
+
+    
+
     return (
         <>
-            <div className="container">
-                <div className="progress">
-                    <div className="pie">
-                        <img src={Headshot} alt="Ari Headshot"/>
-                    </div>
+           <Progress /> 
+            <div className="content">
+                <div className="splash">
+
+                </div>
+                <div className="qualifications">
+
+                </div>
+                <div className="work">
+
+                </div>
+                <div className="about">
+
+                </div>
+                <div className="contact">
+                    
                 </div>
             </div>
         </>

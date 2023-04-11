@@ -1,9 +1,13 @@
 import './App.css';
+import NavigationBar from './components/NavigationBar';
 import SplashPage from './components/SplashPage';
 
 function App() {
   return (
-    <SplashPage />
+    <>
+      <NavigationBar />
+      <SplashPage />
+    </>
   );
 }
 
