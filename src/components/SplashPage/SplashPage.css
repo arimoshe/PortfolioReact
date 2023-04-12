@@ -3,6 +3,7 @@
     --totalHeight:10000000000000;
     --scrollPosDeg:0deg;
     --scrollPosPercentage:0;
+    --heightWithMin: max(680px, 100vh) 
 }
 
 img {
@@ -13,11 +14,13 @@ img {
 }
 .container {
     position:fixed;
+    flex-direction: column;
     width: 100vw;
     display: flex;
-    top: 1.5vw;
-    left: 1.5vw;
+    top: 0;
+    left: 0;
     height: 100vh;
+    z-index: 0;
     
 }
 .pie {
@@ -29,19 +32,14 @@ img {
 .progress {
     width: 500px;
     height: 500px;
-    margin-top: 20px;;
+    margin-top: 55px;;
     transform: 
-        scale(max(calc(.85 - (5 * var(--scrollPosPercentage) / var(--totalHeight))),.7)) translate(
-            max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-120px),
-            max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-100px)
+        scale(max(calc(.85 - (6 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) translate(
+            max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-250px),
+            max(calc(-5000 * (var(--scrollPos) / var(--totalHeight))),-400px)
         );
 }
-.content {
-    height: calc(100vh*4);
-    top:0;
-    left: 0;
-    z-index: -1;
-}
+
 
 
 svg.top-right {
@@ -70,60 +68,104 @@ svg.top-left {
     transform: rotate(184deg);
 }
 circle.top-right {
-    stroke: red;
+    stroke: #8ecae6;
     stroke-width: 30px;
     fill: rgba(255, 255, 255, 0);
     stroke-dasharray:1445px ;
-    stroke-dashoffset:  max(1111px, calc(1445px - (1445 *  (var(--scrollPos) / var(--totalHeight)))));
+    stroke-dashoffset: min(1445px,max(1111px, calc(1445px - (1336 *  (var(--scrollPos) / (var(--totalHeight) + 80))))));
     
 }
 
 circle.bottom-right {
-    stroke: blue;
+    stroke: #219ebc;
     stroke-width: 30px;
     fill: rgba(255, 255, 255, 0);
     stroke-dasharray: 1445px;
-    stroke-dashoffset: min(1445px, max(1111px, calc(1806.25px - (1445 * (var(--scrollPos) / var(--totalHeight))))));
+    stroke-dashoffset: min(1445px, max(1111px, calc(1445px - (1336 * ((var(--scrollPos) - (var(--heightWithMin) + 80px))) / var(--totalHeight)))));
 }
 
 circle.bottom-left {
-    stroke: green;
+    stroke: #ffb703;
     stroke-width: 30px;
     fill: rgba(255, 255, 255, 0);
     stroke-dasharray: 1445px;
-    stroke-dashoffset: min(1445px, max(1111px, calc(2167.5px - (1445 * (var(--scrollPos) / var(--totalHeight))))));
+    stroke-dashoffset: min(1445px, max(1111px, calc(1445px - (1336 * ((var(--scrollPos) - ((2 * var(--heightWithMin)) + 80px)) / var(--totalHeight))))));
 }
-
 circle.top-left {
-    stroke: purple;
+    stroke: #fb8500;
     stroke-width: 30px;
     fill: rgba(255, 255, 255, 0);
     stroke-dasharray: 1445px;
-    stroke-dashoffset: min(1445px, max(1111px, calc(2528.75px - (1445 * (var(--scrollPos) / var(--totalHeight))))));
-}
+    stroke-dashoffset: min(1445px, max(1111px, calc(1445px - (1336 * ((var(--scrollPos) - ((3 * var(--heightWithMin)) + 80px)) / var(--totalHeight))))));
+    }
 
+.content {
+    z-index: 10;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 
 .content > div {
     height: 100vh;
-    width:100vw;
+    min-height: 680px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:baseline ;
 }
 .splash {
-    background-color: rgb(255, 200, 200);
+    background-color: rgb(255, 255, 255);
 }
 .qualifications {
     
-    background-color: rgb(200, 200, 255);
+    background-color: rgb(220, 220, 220);
 }
 .work {
     
-    background-color: rgb(200, 255, 200);
+    background-color: rgb(255, 255, 255);
 }
 .about {
     
-    background-color: rgb(255, 200, 255);   
+    background-color: rgb(220, 220, 220);
 }
-.content > .contact {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(255, 200, 200);
+.contact {
+    background-color: rgb(255, 255, 255);
+}
+
+.splash > .contentBox {
+    margin-top: 100px;
+}
+
+.contentBox {
+    max-width: 1166px;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+.headline {
+    font-size: 80px;
+    width: 50vw;
+    text-align: center;
+    font-weight: bold;
+}
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+}
+.highlight:before {
+    content: "";
+    background-color: #8ecae6;
+    width: 90%;
+    height: .2em;
+    z-index: -1;
+    position: absolute;
+    filter: url(#marker-shape);
+    left: -0.05em;
+    padding: 0 0.25em;
+    bottom: 0.2em
 }

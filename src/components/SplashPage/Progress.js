@@ -19,13 +19,23 @@ function Progress () {
         r.style.setProperty('--scrollPos', window.scrollY + "px");
         r.style.setProperty('--scrollPosDeg', window.scrollY + 'deg')
         r.style.setProperty('--scrollPosPercentage', window.scrollY)
+        if (window.innerHeight >= 680) {
+            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
+        } else {
+            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - 680)
+        }
     }
 
     useEffect(() => {
-        document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
+        if (window.innerHeight >= 680) {
+            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
+        } else {
+            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - 680)
+        }
     }, [])
+    
     document.addEventListener('scroll', debounce(storeScroll));
-
+    document.addEventListener('resize', debounce(storeScroll));
 
     return (
         <div className="container">
@@ -56,6 +66,7 @@ function Progress () {
                     <circle className="top-left" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
             </div>
+            
         </div>
     )
 }
