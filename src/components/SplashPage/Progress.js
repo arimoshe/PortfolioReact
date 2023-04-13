@@ -53,17 +53,55 @@ function Progress () {
 
                             <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
                         </filter>
+                        <path id="textCircle"
+                            d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
                     </defs>
+                    <text>
+                        <textPath xlinkHref="#textCircle"
+                            textLength={110} startOffset="595">
+                            Meet Me
+                        </textPath>
+                    </text>
                     <circle className="top-right" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
                 <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                    <defs>
+                        <path id="textCircle"
+                            d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
+                    </defs>
+                    <text>
+                        <textPath xlinkHref="#textCircle"
+                                  textLength={350} startOffset="500">
+                            Education | Experience | Skills
+                                  </textPath>
+                    </text>
                     <circle className="bottom-right" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
                 <svg className="bottom-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                    <defs>
+                        <path id="textCircle"
+                            d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
+                    </defs>
+                    <text>
+                        <textPath xlinkHref="#textCircle"
+                            textLength={110} startOffset="620">
+                            Projects
+                        </textPath>
+                    </text>
                     <circle className="bottom-left" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
                 <svg className="top-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
                     <circle className="top-left" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
+                    <defs>
+                        <path id="textCircle"
+                            d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
+                    </defs>
+                    <text>
+                        <textPath xlinkHref="#textCircle"
+                            textLength={120} startOffset="630">
+                            About Me
+                        </textPath>
+                    </text>
                 </svg>
             </div>
             

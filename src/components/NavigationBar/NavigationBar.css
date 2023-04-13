@@ -81,8 +81,13 @@
     text-decoration-color: #fb8500;
 }
 
+.sectionLabelContact {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+}
+
 .sectionLabelContainer {
-    padding-top:30px;
+    padding-top:28px;
     box-sizing: border-box;
     height: 80px;
     display: flex;

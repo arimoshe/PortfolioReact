@@ -6,7 +6,7 @@
     --heightWithMin: max(680px, 100vh) 
 }
 
-img {
+.pie > img {
     height: 400px;
     width: 400px;
     border-radius: 50%;;
@@ -15,11 +15,9 @@ img {
 .container {
     position:fixed;
     flex-direction: column;
-    width: 100vw;
     display: flex;
     top: 0;
     left: 0;
-    height: 100vh;
     z-index: 0;
     
 }
@@ -34,38 +32,45 @@ img {
     height: 500px;
     margin-top: 55px;;
     transform: 
-        scale(max(calc(.85 - (6 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) translate(
+        scale(max(calc(.85 - (5.7 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) translate(
             max(calc(-3000 * (var(--scrollPos) / var(--totalHeight))),-250px),
-            max(calc(-5000 * (var(--scrollPos) / var(--totalHeight))),-400px)
+            max(calc(-5000 * (var(--scrollPos) / var(--totalHeight))),-500px)
         );
 }
 
-
+.progress > svg {
+    font-size: 25px;
+    font-weight: bold;
+    fill: rgba(0,0,0,min(1, calc(5 * var(--scrollPosPercentage) / var(--totalHeight))))
+}
 
 svg.top-right {
     position: absolute;
     top:-260px;
     left:-240px;
     transform: rotate(-86deg);
+    fill: rgba(0, 0, 0, min(1, calc((5 * var(--scrollPosPercentage) / var(--totalHeight)) - 0)))
 }
 svg.bottom-right {
     position: absolute;
     top: -240px;
     left: -240px;
     transform: rotate(4deg);
-    
+        fill: rgba(0, 0, 0, min(1, calc((5 * var(--scrollPosPercentage) / var(--totalHeight)) - 1.25)))
 }
 svg.bottom-left {
     position: absolute;
     top: -240px;
     left: -260px;
     transform: rotate(94deg);
+    fill: rgba(0, 0, 0, min(1, calc((5 * var(--scrollPosPercentage) / var(--totalHeight)) - 2.5)))
 }
 svg.top-left {
     position: absolute;
     top: -260px;
     left: -260px;
     transform: rotate(184deg);
+    fill: rgba(0, 0, 0, min(1, calc((5 * var(--scrollPosPercentage) / var(--totalHeight)) - 3.75)))
 }
 circle.top-right {
     stroke: #8ecae6;
@@ -77,6 +82,7 @@ circle.top-right {
 }
 
 circle.bottom-right {
+    stroke: #219ebc;
     stroke: #219ebc;
     stroke-width: 30px;
     fill: rgba(255, 255, 255, 0);
@@ -138,16 +144,21 @@ circle.top-left {
 }
 
 .splash > .contentBox {
-    margin-top: 100px;
+    margin-top: max(9vh,50px);
+    padding-left: 50px;
+    
 }
 
 .contentBox {
     max-width: 1166px;
-    padding-left: 100px;
-    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .headline {
-    font-size: 80px;
+    font-size: max(8vh,70px);
     width: 50vw;
     text-align: center;
     font-weight: bold;
@@ -161,11 +172,60 @@ circle.top-left {
     content: "";
     background-color: #8ecae6;
     width: 90%;
-    height: .2em;
+    height: .85em;
     z-index: -1;
     position: absolute;
     filter: url(#marker-shape);
     left: -0.05em;
     padding: 0 0.25em;
-    bottom: 0.2em
+    bottom: 0.1em
+}
+.subhead {
+    text-align: center;
+    font-size: max(2vh,20px);
+    padding-top: 4vh;
+}
+
+.learnMore {
+    text-align: center;
+    font-size: max(3vh,25px); 
+    font-weight:bold;
+    padding-top: max(8vh, 50px) ;
+}
+
+.anchorButtons {
+    padding-top: max(5vh, 50px);
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.anchorButtons > div {
+    padding: max(5vh, 50px);
+    border: 2px solid #8ecae6;
+    font-size: max(2.2vh, 20px);
+}
+.education {
+    margin-top: max(8vh,60px) ;
+    font-weight: bold;
+    font-size: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.eduHeader {
+    padding: 1vh;
+    border: 1px solid #219ebc;
+    text-align: center;    
+}
+
+.eduLogos {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.eduLogos > img {
+    width:213px;
 }
