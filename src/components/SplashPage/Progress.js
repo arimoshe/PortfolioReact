@@ -35,7 +35,6 @@ function Progress () {
     }
 
     const scrollToNearestPage = () => {
-            console.log(scrollPos.current, window.scrollY)
 
             const positions = [
                 0, 

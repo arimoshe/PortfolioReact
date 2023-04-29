@@ -32,12 +32,12 @@
     padding: 2.5px;
     margin-left: 15px;
     border:1px solid #000000;
-    /* border-radius: 10px; */
+    background-color: #F0F0F0;
 }
 .navLinkedIn {
     padding:5px 15px;
     box-sizing: border-box;
-    /* border-radius: 5px; */
+    
     font-size: 18px;
     font-weight:  bold;
     display: flex;
