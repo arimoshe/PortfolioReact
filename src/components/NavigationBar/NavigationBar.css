@@ -25,6 +25,7 @@
     font-size: 26px;
     display: flex;
     align-items: center;
+    width: 236px;
 }
 .navLinkedIn {
     padding:5px 15px;

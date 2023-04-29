@@ -14,8 +14,9 @@ function Progress () {
             })
         }
     }
-    const storeScroll = () => {
+    const storeScroll = (e) => {
         const r = document.querySelector(':root')
+        r.style.setProperty('--scale', Math.max(1, window.innerWidth / 1800))
         r.style.setProperty('--scrollPos', window.scrollY + "px");
         r.style.setProperty('--scrollPosDeg', window.scrollY + 'deg')
         r.style.setProperty('--scrollPosPercentage', window.scrollY)
@@ -27,6 +28,7 @@ function Progress () {
     }
 
     useEffect(() => {
+        document.querySelector(':root').style.setProperty('--scale', Math.max(1, window.innerWidth / 1800))
         if (window.innerHeight >= 680) {
             document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
         } else {
@@ -35,7 +37,7 @@ function Progress () {
     }, [])
     
     document.addEventListener('scroll', debounce(storeScroll));
-    document.addEventListener('resize', debounce(storeScroll));
+    window.addEventListener('resize', debounce(storeScroll));
 
     return (
         <div className="container">
