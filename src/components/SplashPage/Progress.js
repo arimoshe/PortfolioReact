@@ -108,7 +108,7 @@ function Progress () {
                     <defs>
                         <filter id="f1" x="0" y="0" width="200%" height="200%">
                             <feComponentTransfer result="colorOut" in="SourceAlpha">
-                                <feFuncA type="linear" slope="0.6" intercept="0" ></feFuncA>
+                                <feFuncA type="linear" slope="0.4" intercept="0" ></feFuncA>
                             </feComponentTransfer>
                             <feGaussianBlur result="blurOut" in="colorOut" stdDeviation="7" />
 

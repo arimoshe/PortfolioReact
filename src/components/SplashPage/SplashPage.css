@@ -141,7 +141,7 @@ circle.top-left {
 }
 .about {
     
-    background-color: rgb(220, 220, 220);
+    background-color:#fafafa;
 }
 .contact {
     background-color: rgb(255, 255, 255);
@@ -267,6 +267,10 @@ circle.top-left {
     text-align: center;
 }
 
+.skillsIcon {
+    width: 100px
+}
+
 .skillsIcons svg {
     width: 100px;
     padding-top: 3vh;
@@ -277,6 +281,35 @@ circle.top-left {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+}
+.projectList {  
+    padding-top: max(4vh, 25px);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.projectItem {
+    border: 1px solid #ffb703;
+    font-size: max(3vh, 20px);
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectItem img {
+    width:300px;
+    padding: 0;
+    border:1px
+}
+
+.projectTitle {
+    padding: 10px 10px 18px 10px
+}
+.projectImg {
+    height:314px;
+    overflow: hidden; 
 }
 
 @media only screen and (max-width: 1400px) {

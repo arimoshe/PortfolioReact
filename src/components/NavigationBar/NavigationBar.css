@@ -27,10 +27,17 @@
     align-items: center;
     width: 236px
 }
+.github {
+    height: 35px;
+    padding: 2.5px;
+    margin-left: 15px;
+    border:1px solid #000000;
+    /* border-radius: 10px; */
+}
 .navLinkedIn {
     padding:5px 15px;
     box-sizing: border-box;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 18px;
     font-weight:  bold;
     display: flex;
