@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortfolioReact/static/css/main.7634b4d0.css",
-    "main.js": "/PortfolioReact/static/js/main.8c8d3351.js",
+    "main.css": "/PortfolioReact/static/css/main.ca5ab463.css",
+    "main.js": "/PortfolioReact/static/js/main.04246587.js",
     "static/js/787.1ed0c42c.chunk.js": "/PortfolioReact/static/js/787.1ed0c42c.chunk.js",
     "static/media/Marblio.gif": "/PortfolioReact/static/media/Marblio.9ca2ce337e14ad86c93d.gif",
     "static/media/DSCF1405.jpg": "/PortfolioReact/static/media/DSCF1405.e3da6a8452816eb1e39f.jpg",
@@ -10,12 +10,12 @@
     "static/media/UC-Berkeley-Symbol-small.png": "/PortfolioReact/static/media/UC-Berkeley-Symbol-small.ae489623083010d060fc.png",
     "static/media/aAlogo.svg": "/PortfolioReact/static/media/aAlogo.3cc77abf72df1384a01c31f38e0b61d0.svg",
     "index.html": "/PortfolioReact/index.html",
-    "main.7634b4d0.css.map": "/PortfolioReact/static/css/main.7634b4d0.css.map",
-    "main.8c8d3351.js.map": "/PortfolioReact/static/js/main.8c8d3351.js.map",
+    "main.ca5ab463.css.map": "/PortfolioReact/static/css/main.ca5ab463.css.map",
+    "main.04246587.js.map": "/PortfolioReact/static/js/main.04246587.js.map",
     "787.1ed0c42c.chunk.js.map": "/PortfolioReact/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7634b4d0.css",
-    "static/js/main.8c8d3351.js"
+    "static/css/main.ca5ab463.css",
+    "static/js/main.04246587.js"
   ]
 }
