@@ -158,9 +158,7 @@ circle.top-left {
     
     
 }
-.qualifications.contentBox {
-    padding-left: max(max(0px, calc((1688px - 100vw) / 2)), calc((max(1500px, 1584px * (1 - var(--scrollPosPercentage) / var(--totalHeight)))) - 100vw))
-}
+
 .contentBox {
     box-sizing: border-box;
     padding-top: 80px;
