@@ -165,10 +165,14 @@ circle.top-left {
     align-items: center;
     padding-left: max(0px, calc((1688px - 100vw) / 2));
     padding-right: 5px;
+    align-self: center;
+}
+.splash > .contentBox {
+    align-self: initial;
 }
 
 .headline {
-    font-size: max(8vh,50px);
+    font-size: max(7vh,45px);
     width: 65%;
     text-align: center;
     font-weight: bold;
@@ -195,7 +199,7 @@ circle.top-left {
 .subhead {
     text-align: center;
     font-size: max(2vh,20px);
-    padding-top: 8vh;
+    padding: 6vh 0 0 5vw;
     width:70%;
 }
 
@@ -203,7 +207,7 @@ circle.top-left {
     text-align: center;
     font-size: max(3vh,25px); 
     font-weight:bold;
-    padding-top: max(8vh, 50px) ;
+    padding-top: max(6vh, 30px) ;
 }
 
 .anchorButtons {
@@ -227,6 +231,8 @@ circle.top-left {
     justify-content: center;
     width: 100%;
 }
+
+
 .qualifications .header {
     padding: 1vh;
     color: #ffffff;
@@ -247,7 +253,7 @@ circle.top-left {
 }
 
 .skills {
-    margin-top: max(vh, 30px);
+    margin-top: max(4vh, 30px);
     font-weight: bold;
     font-size: 4vh;
     display: flex;
@@ -268,11 +274,12 @@ circle.top-left {
 }
 
 .skillsIcon {
-    width: 100px
+    width: 8vw;
+    text-align: center;
 }
 
 .skillsIcons svg {
-    width: 100px;
+    width: 5vw;
     padding-top: 3vh;
 }
 .skillsRow {

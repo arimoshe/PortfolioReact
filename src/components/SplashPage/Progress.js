@@ -92,9 +92,9 @@ function Progress () {
     }, [])
     
     document.addEventListener('scroll', debounce(storeScroll));
-    document.addEventListener('scroll', throttle((e) => { 
-        snapScroll(window.scrollY)
-     }, 500))
+    // document.addEventListener('scroll', throttle((e) => { 
+    //     snapScroll(window.scrollY)
+    //  }, 500))
     window.addEventListener('resize', debounce(storeScroll));
 
     return (
