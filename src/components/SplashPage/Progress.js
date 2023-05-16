@@ -18,55 +18,55 @@ function Progress () {
         }
     }
 
-    function throttle(func, wait) {
+    // function throttle(func, wait) {
         
-        let waiting = false;
-        return function () {
-            if (waiting) {
-                return;
-            }
+    //     let waiting = false;
+    //     return function () {
+    //         if (waiting) {
+    //             return;
+    //         }
 
-            waiting = true;
-            setTimeout(() => {
-                func.apply(this, arguments);
-                waiting = false;
-            }, wait);
-        };
-    }
+    //         waiting = true;
+    //         setTimeout(() => {
+    //             func.apply(this, arguments);
+    //             waiting = false;
+    //         }, wait);
+    //     };
+    // }
 
-    const scrollToNearestPage = () => {
+    // const scrollToNearestPage = () => {
 
-            const positions = [
-                0, 
-                document.querySelector('.qualifications').getBoundingClientRect().top + window.scrollY, 
-                document.querySelector('.work').getBoundingClientRect().top + window.scrollY, 
-                document.querySelector('.about').getBoundingClientRect().top + window.scrollY, 
-                document.querySelector('.contact').getBoundingClientRect().top + window.scrollY
-            ]
-            for (let i = 0; i <= 4; i++) {
+    //         const positions = [
+    //             0, 
+    //             document.querySelector('.qualifications').getBoundingClientRect().top + window.scrollY, 
+    //             document.querySelector('.work').getBoundingClientRect().top + window.scrollY, 
+    //             document.querySelector('.about').getBoundingClientRect().top + window.scrollY, 
+    //             document.querySelector('.contact').getBoundingClientRect().top + window.scrollY
+    //         ]
+    //         for (let i = 0; i <= 4; i++) {
                 
-                if (window.scrollY > scrollPos.current && window.scrollY - positions[i] < 50) {
-                    window.scrollTo({ top: positions[i], behavior:"smooth"});   
-                    scrollPos.current = positions[i];
-                    break;
-                } else if (i > 0 && window.scrollY < scrollPos.current && window.scrollY - positions[i] < -100) {
-                    window.scrollTo({ top: positions[i - 1], behavior: "smooth" });
-                    scrollPos.current = positions[i - 1];
-                    break;
-                }
-            }
+    //             if (window.scrollY > scrollPos.current && window.scrollY - positions[i] < 50) {
+    //                 window.scrollTo({ top: positions[i], behavior:"smooth"});   
+    //                 scrollPos.current = positions[i];
+    //                 break;
+    //             } else if (i > 0 && window.scrollY < scrollPos.current && window.scrollY - positions[i] < -100) {
+    //                 window.scrollTo({ top: positions[i - 1], behavior: "smooth" });
+    //                 scrollPos.current = positions[i - 1];
+    //                 break;
+    //             }
+    //         }
         
 
-    }
+    // }
 
-    const snapScroll = (prevScrollPos, first)=>{
-        setTimeout(()=>{
-            if (prevScrollPos === window.scrollY) {
-                scrollToNearestPage();
-            }
-        }, 200)
+    // const snapScroll = (prevScrollPos, first)=>{
+    //     setTimeout(()=>{
+    //         if (prevScrollPos === window.scrollY) {
+    //             scrollToNearestPage();
+    //         }
+    //     }, 200)
         
-    }
+    // }
 
     const storeScroll = (e) => {
         const r = document.querySelector(':root')

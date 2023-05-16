@@ -25,9 +25,9 @@ function SplashPage() {
                         <div className="subhead">I see technology as a means to connect each other and create value in the world.</div>
                         <div className="learnMore"> Learn More: </div>
                         <div className="anchorButtons">
-                            <div>Education | Experience | Skills</div>
-                            <div>Projects</div>
-                            <div>About me</div>
+                            <div onClick={() => document.getElementById("qualifications").scrollIntoView({ behavior: "smooth" })}>Education | Experience | Skills</div>
+                            <div onClick={() => document.getElementById("work").scrollIntoView({ behavior: "smooth" })}>Projects</div>
+                            <div onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>About me</div>
                         </div>
                     </div>
                     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters" style={{display:'none'}}>
@@ -39,7 +39,7 @@ function SplashPage() {
                         </defs>
                     </svg>
                 </div>
-                <div className="qualifications">
+                <div className="qualifications" id="qualifications">
                     <div className="contentBox">
                         <div className="education">
                             <div className="header">
@@ -157,7 +157,7 @@ function SplashPage() {
                         </div>
                     </div>
                 </div>
-                <div className="work">
+                <div className="work" id="work">
                     <div className="contentBox">
                         <div className="projectList">
                             <div className="projectItem campfire">
@@ -165,17 +165,17 @@ function SplashPage() {
                                     Campfire
                                 </div>
                                 <div className="projectImg">
-                                    <img src={Campfire} />
+                                    <img src={Campfire} alt="Campfire"/>
                                 </div>
                                 <div className="projectDesc">
                                     A single page web-app based on the campsite booking site Hipcamp, built with Rails, React, Redux and CSS.
                                 </div>
                                 <div className="projectLinks">
                                     <div className="projectLink githubLink">
-                                        <a>Github</a>
+                                        <a href="https://github.com/arimoshe/Campfire">Github</a>
                                     </div>
                                     <div className="projectLink demoLink">
-                                        <a>Demo</a>
+                                        <a href="https://campfire-aa.herokuapp.com/">Demo</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,17 +184,17 @@ function SplashPage() {
                                     here&now
                                 </div>
                                 <div className="projectImg">
-                                    <img src={hereNow} />
+                                    <img src={hereNow} alt="Here&Now" />
                                 </div>
                                 <div className="projectDesc">
                                     An original single page app built using the MERN stack for creating and sharing hyper-local, same-day events.
                                 </div>
                                 <div className="projectLinks">
                                     <div className="projectLink githubLink">
-                                        <a>Github</a>
+                                        <a href="https://github.com/Rymul/here-now">Github</a>
                                     </div>
                                     <div className="projectLink demoLink">
-                                        <a>Demo</a>
+                                        <a href="https://here-now-825.herokuapp.com/">Demo</a>
                                     </div>
                                 </div>
                             </div>
@@ -203,24 +203,24 @@ function SplashPage() {
                                     Marbl.io
                                 </div>
                                 <div className="projectImg">
-                                    <img src={Marblio} />
+                                    <img src={Marblio} alt="Marbl.io" />
                                 </div>
                                 <div className="projectDesc">
                                     An 8-bit style marble-balancing game that requires rolling a marble through a map filled with holes.
                                 </div>
                                 <div className="projectLinks">
                                     <div className="projectLink githubLink">
-                                        <a>Github</a>
+                                        <a href="https://github.com/arimoshe/Marbl.io">Github</a>
                                     </div>
                                     <div className="projectLink demoLink">
-                                        <a>Demo</a>
+                                        <a href="https://arimoshe.github.io/Marbl.io">Demo</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="about">
+                <div className="about" id="about">
                     <div className="contentBox">
                         <div className="borderBox">
                             <div className="aboutHeader">
@@ -262,7 +262,7 @@ function SplashPage() {
                             </div>
                             <div className="navLinkedIn">
                                 <span className="navLiIcon"><AiFillLinkedin /></span>
-                                <div>Connect On LinkedIn</div>
+                                <a href="https://www.linkedin.com/in/ari-moshe/"><div>Connect On LinkedIn</div></a>
                             </div>
                         </div>
                     </div>
