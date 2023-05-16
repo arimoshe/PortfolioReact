@@ -70,7 +70,7 @@ function Progress () {
 
     const storeScroll = (e) => {
         const r = document.querySelector(':root')
-        r.style.setProperty('--scale', Math.max(1, window.innerWidth / 1800))
+        r.style.setProperty('--scale', Math.min(1, window.innerWidth / 1400))
         r.style.setProperty('--scrollPos', window.scrollY + "px");
         r.style.setProperty('--scrollPosDeg', window.scrollY + 'deg')
         r.style.setProperty('--scrollPosPercentage', window.scrollY)
@@ -82,11 +82,12 @@ function Progress () {
     }
 
     useEffect(() => {
-        document.querySelector(':root').style.setProperty('--scale', Math.max(1, window.innerWidth / 1800))
+        const r = document.querySelector(':root')
+        r.style.setProperty('--scale', Math.min(1, window.innerWidth / 1400))
         if (window.innerHeight >= 680) {
-            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
+            r.style.setProperty('--totalHeight', document.body.scrollHeight - window.innerHeight)
         } else {
-            document.querySelector(':root').style.setProperty('--totalHeight', document.body.scrollHeight - 680)
+            r.style.setProperty('--totalHeight', document.body.scrollHeight - 680)
         }
         
     }, [])
@@ -103,7 +104,7 @@ function Progress () {
                 <div className="pie">
                     <img src={Headshot} alt="Ari Headshot" />
                 </div>
-                <svg className="top-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                <svg className="top-right" xmlns="http://www.w3.org/2000/svg" version="1.1" >
                     <defs>
                         <filter id="f1" x="0" y="0" width="200%" height="200%">
                             <feComponentTransfer result="colorOut" in="SourceAlpha">
@@ -124,7 +125,7 @@ function Progress () {
                     </text>
                     <circle className="top-right" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
-                <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" version="1.1" >
                     <defs>
                         <path id="textCircle"
                             d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
@@ -137,7 +138,7 @@ function Progress () {
                     </text>
                     <circle className="bottom-right" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
-                <svg className="bottom-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                <svg className="bottom-left" xmlns="http://www.w3.org/2000/svg" version="1.1" >
                     <defs>
                         <path id="textCircle"
                             d="M220,500a280,280 0 1,0 560,0a280,280 0 1,0 -560,0" />
@@ -150,7 +151,7 @@ function Progress () {
                     </text>
                     <circle className="bottom-left" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                 </svg>
-                <svg className="top-left" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="1000px">
+                <svg className="top-left" xmlns="http://www.w3.org/2000/svg" version="1.1" >
                     <circle className="top-left" cx="500" cy="500" r="230" strokeLinecap="round" filter="url(#f1)" />
                     <defs>
                         <path id="textCircle"

@@ -19,8 +19,11 @@
     top: 30px;
     left: 0;
     z-index: 1;
-    transform: scale(var(--scale))
-    translate(calc((var(--scale) - 1)*400px),calc((var(--scale) - 1)*60px));
+    width: 0;
+    overflow:visible;
+    transform-origin: 50% 0% ;
+    transform: scale(var(--scale)) 
+                translateX(max(0px, calc((100vw - 1800px) / 4)));
 }
 .pie {
     display: flex;
@@ -34,14 +37,17 @@
     margin-top: 55px;
     transform-origin: 55% 0%;
     transform: 
-        scale(max(calc(.85 - (2.65 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) 
+        scale(max(calc(.85 - (1.95 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) 
         translate(
             /* max(calc(-3400 * (var(--scrollPos) / var(--totalHeight))),min(-300px, calc((100vw - 1720px - 1200px) / 4))), */
-            max(calc(-2000 * (var(--scrollPos) / var(--totalHeight))),-375px)
+            max(calc(-1750 *  (var(--scrollPos) / var(--totalHeight))),-450px)
         );
 }
 
 .progress > svg {
+
+    width: 1000px;
+    height: 1000px;
     font-size: 25px;
     font-weight: bold;
     fill: rgba(0,0,0,min(1, calc(5 * var(--scrollPosPercentage) / var(--totalHeight))))
@@ -133,7 +139,7 @@ circle.top-left {
     
 }
 .qualifications {
-    background-color: #fafafa;
+    background-color: #F0F0F0;
 }
 .work {
     
@@ -141,7 +147,7 @@ circle.top-left {
 }
 .about {
     
-    background-color:#fafafa;
+    background-color:#F0F0F0;
 }
 .contact {
     background-color: rgb(160, 160, 160);
@@ -163,17 +169,19 @@ circle.top-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: max(0px, calc((1688px - 100vw) / 2));
-    padding-right: 5px;
+    padding-left: max(0px, calc((1560px - 100vw) / 2));
+    padding-right: max(0px, calc((1560px - 100vw) / 2));
     align-self: center;
+    z-index: 2;
 }
 .splash > .contentBox {
     align-self: initial;
+    padding-left: max(0px, calc((1688px - 100vw) / 2));
 }
 
 .headline {
-    font-size: max(7vh,45px);
-    width: 65%;
+    font-size: min(max(7vh, 50px), 90px);
+    width: 72%;
     text-align: center;
     font-weight: bold;
     line-height:1.25em;
@@ -207,7 +215,7 @@ circle.top-left {
     text-align: center;
     font-size: max(3vh,25px); 
     font-weight:bold;
-    padding-top: max(6vh, 30px) ;
+    padding-top: max(8vh, 50px) ;
 }
 
 .anchorButtons {
@@ -218,9 +226,9 @@ circle.top-left {
 }
 
 .anchorButtons > div {
-    padding: max(5vh, 50px);
+    padding: min(max(5vh, 30px),50px) min(max(3vw, 20px), 40px);
     border: 2px solid #8ecae6;
-    font-size: max(2.2vh, 20px);
+    font-size: min(max(2.2vh, 20px),30px);
 }
 .education {
     margin-top: max(8vh,60px) ;
@@ -268,7 +276,7 @@ circle.top-left {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    font-size: max(2vh, 20px);
+    font-size: min(max(2vh, 20px),30px);
     font-weight:normal;
     text-align: center;
 }
@@ -279,7 +287,7 @@ circle.top-left {
 }
 
 .skillsIcons svg {
-    width: 5vw;
+    width: min(5vw, 100px);
     padding-top: 3vh;
 }
 .skillsRow {
@@ -308,7 +316,8 @@ circle.top-left {
 
 .projectTitle {
     text-decoration: underline;
-    font-size: max(3vh, 20px);
+    font-weight: bold;
+    font-size: min(max(3vh, 20px), 30px);
 }
 
 .campfire.projectItem img {
@@ -358,7 +367,7 @@ circle.top-left {
 
 .projectLink > a {
     text-decoration: none;
-    font-size: max(2.2vh, 14px);
+    font-size: min(max(2.2vh, 14px),20px);
     color: #FFFFFF
 }
 .projectDesc {
