@@ -194,7 +194,7 @@ function SplashPage() {
                                         <a href="https://github.com/Rymul/here-now">Github</a>
                                     </div>
                                     <div className="projectLink demoLink">
-                                        <a href="https://here-now-825.herokuapp.com/">Demo</a>
+                                        <a href="https://hereandnow-9a3832050166.herokuapp.com/">Demo</a>
                                     </div>
                                 </div>
                             </div>
