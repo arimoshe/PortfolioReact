@@ -231,7 +231,8 @@ function SplashPage() {
                                 Actively writing code and learning new technologies.
                             </div>
                             <div className="githubContrib">
-                                <img src="https://ghchart.rshah.org/fb8500/arimoshe" alt="arimoshe's Github chart" />
+                                {/* <img src="https://ghchart.rshah.org/fb8500/arimoshe" alt="arimoshe's Github chart" /> */}
+                                <img src="https://ghchart.rshah.org/arimoshe" alt="arimoshe's Github chart" />
                             </div>
                             <div className="aboutDesc">
                                 <div className="aboutSummary">I'm a full-stack software engineer comfortable working across a number of different frameworks. I have eight years of experience working in email marketing writing JS code and scripting in SQL. I enjoy creating technical solutions that drive business value.</div>
