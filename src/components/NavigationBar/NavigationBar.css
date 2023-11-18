@@ -18,8 +18,8 @@
     box-sizing: border-box;
     height: 80px;
     padding: 0 30px;
-    
-    backdrop-filter: blur(10px);
+    background-color: #FFFFFF;
+    /* backdrop-filter: blur(10px); */
 }
 .navName {
     font-size: 26px;

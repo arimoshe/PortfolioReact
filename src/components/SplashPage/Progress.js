@@ -104,6 +104,7 @@ function Progress () {
                 <div className="pie">
                     <img src={Headshot} alt="Ari Headshot" />
                 </div>
+                {/*
                 <svg className="top-right" xmlns="http://www.w3.org/2000/svg" version="1.1" >
                     <defs>
                         <filter id="f1" x="0" y="0" width="200%" height="200%">
@@ -164,6 +165,7 @@ function Progress () {
                         </textPath>
                     </text>
                 </svg>
+                */}
             </div>
             
         </div>

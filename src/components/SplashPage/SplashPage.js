@@ -27,7 +27,7 @@ function SplashPage() {
                         <div className="anchorButtons">
                             <div onClick={() => document.getElementById("qualifications").scrollIntoView({ behavior: "smooth" })}>Education | Experience | Skills</div>
                             <div onClick={() => document.getElementById("work").scrollIntoView({ behavior: "smooth" })}>Projects</div>
-                            <div onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>About me</div>
+                            <div onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>About Me</div>
                         </div>
                     </div>
                     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters" style={{display:'none'}}>

@@ -12,8 +12,9 @@
     border-radius: 50%;;
     
 }
+
 .container {
-    position:fixed;
+    position: absolute;
     flex-direction: column;
     display: flex;
     top: 30px;
@@ -35,15 +36,15 @@
     width: 500px;
     height: 500px;
     margin-top: 55px;
-    transform-origin: 55% 0%;
+    /*transform-origin: 55% 0%;
     transform: 
         scale(max(calc(.85 - (1.95 * var(--scrollPosPercentage) / var(--totalHeight))),.35)) 
         translate(
-            /* max(calc(-3400 * (var(--scrollPos) / var(--totalHeight))),min(-300px, calc((100vw - 1720px - 1200px) / 4))), */
             max(calc(-1750 *  (var(--scrollPos) / var(--totalHeight))),-450px)
         );
+        */
 }
-
+/*
 .progress > svg {
 
     width: 1000px;
@@ -112,7 +113,8 @@ circle.top-left {
     fill: rgba(255, 255, 255, 0);
     stroke-dasharray: 1445px;
     stroke-dashoffset: min(1445px, max(1111px, calc(1445px - (1336 * ((var(--scrollPos) - ((3 * var(--heightWithMin)) + 80px)) / var(--totalHeight))))));
-    }
+    } 
+    */
 
 .content {
     z-index: 10;
@@ -226,12 +228,13 @@ circle.top-left {
 .anchorButtons  div {
     padding: min(max(5vh, 30px),50px) min(max(3vw, 20px), 40px);
     border: 2px solid #8ecae6;
-    font-size: min(max(2.2vh, 20px),30px);
+    
     
 }
 .anchorButtons > a {
     color: #000000;
     text-decoration: none;
+    font-size: min(max(2.2vh, 20px), 30px);
 }
 
 .anchorButtons div:hover {
